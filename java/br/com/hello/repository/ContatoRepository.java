@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.tomcat.dbcp.dbcp2.ConnectionFactory;
-
 import br.com.hello.entity.Contato;
 
 public class ContatoRepository implements iRepository<Contato>{
@@ -19,7 +17,7 @@ public class ContatoRepository implements iRepository<Contato>{
 
 	public ContatoRepository() {
 		try {
-			connection = ConnectionFactory.getConnection();
+			connection = br.com.hello.adapter.ConnectionFactory.getConnection();
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
