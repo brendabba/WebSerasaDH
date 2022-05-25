@@ -12,9 +12,8 @@ public class Contato {
 		
 	}
 	
-	public Contato(Integer id, String nome, String email) {
+	public Contato(String nome, String email) {
 		super();
-		this.id = id;
 		this.nome = nome;
 		this.email = email;
 	}
@@ -40,7 +39,7 @@ public class Contato {
 	
 	@Override
 	public String toString() {
-		return "ID: "+getId()+"- nome: "+getNome()+"- email: "+getEmail();
+		return "Nome: "+getNome()+"- email: "+getEmail();
 		
 	
 	}
